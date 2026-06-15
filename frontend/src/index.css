@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: #ffffff;
+    color: #071456;
+  }
+  ::selection { background: #ff4400; color: #fff; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center bg-accent hover:bg-accent-hover text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 active:scale-95;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center border border-white/60 text-white hover:bg-white hover:text-brand-navy font-semibold px-6 py-3 rounded-lg transition-all duration-200;
+  }
+  .btn-navy {
+    @apply inline-flex items-center justify-center bg-brand-navy hover:bg-brand-light text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 active:scale-95;
+  }
+  .card {
+    @apply bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-black/5;
+  }
+  .input {
+    @apply w-full bg-neutral-50 border border-black/10 rounded-2xl px-4 py-3 text-sm text-brand-navy placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all;
+  }
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold;
+  }
+  .section-shell {
+    @apply max-w-[1500px] mx-auto px-4;
+  }
+  .orange-line {
+    @apply w-10 h-[2px] bg-[#ff4400] mt-2 mb-4;
+  }
+}
